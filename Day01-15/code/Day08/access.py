@@ -1,4 +1,4 @@
-class Test:
+class Test(object):
 
     def __init__(self, foo):
         self.__foo = foo
@@ -6,6 +6,9 @@ class Test:
     def __bar(self):
         print(self.__foo)
         print('__bar')
+    @staticmethod
+    def pie(self):
+        pass
 
 
 def main():
