@@ -9,10 +9,8 @@ class MovieSpider(scrapy.Spider):
     allowed_domains = ['movie.douban.com']
     start_urls = ['https://movie.douban.com/top250']
 
-
     def parse(self, response):
         li_list = response.xpath('//*[@id="content"]/div/div[1]/ol/li')
-
         for li in li_list:
             item = MovieItem()
             item['title'] = li.xpath('div/div[2]/div[1]/a/span[1]/text()').extract_first()
