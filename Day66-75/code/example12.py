@@ -1,9 +1,10 @@
 import base64
-from io import BytesIO
 
-import requests
 from PIL import Image, ImageFilter
 from pytesseract import image_to_string
+
+import requests
+from io import BytesIO
 
 
 def main():
